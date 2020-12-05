@@ -44,6 +44,52 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">OPINION</a>
                             </li>
+
+
+                <ul class="rd-navbar-nav"> 
+
+    <?php if (Yii::$app->user->isGuest) { ?> 
+
+
+
+    <li class="nav-item"> 
+
+        <a class="nav-link" href="/user-management/auth/login" >iniciar Sesion</a> 
+
+    </li> 
+
+        <?php } else{?> 
+                      
+            <li class="nav-item"> 
+
+                <a class="nav-link" href="/user-management/role/index">Roles</a> 
+
+            </li> 
+
+            <li class="nav-item"> 
+
+                <a class="nav-link" href="/user-management/user/index">Usuarios</a> 
+
+            </li> 
+
+            <li class="nav-item"> 
+
+                <a class="nav-link" href="/user-management/user/index">Bitácora</a> 
+
+            </li> 
+
+            <li class="nav-item"> 
+
+                <a class="nav-link" href="/user-management/auth/logout">Cerrar Sesion ( <?= Yii::$app->user->username?> )</a> 
+
+            </li> 
+
+        <?php } ?> 
+
+</ul>
+
+
+
                             <li class="nav-item">
                                 <form action="" method="POST">
                                     <div class="input-group mt-0 mx-auto" style="width:16px;">
@@ -58,3 +104,5 @@
                         </ul>
                     </div>
                 </nav>
+
+   
